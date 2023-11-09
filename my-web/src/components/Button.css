@@ -1,0 +1,41 @@
+:root {
+    --prim: #fff;
+}
+
+.but {
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.but--prim {
+    background-color: var(--prim);
+    color: #242424;
+    border: 1px solid var(--prim);
+}
+
+.but--outl {
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid var(--prim);
+    transition: all 0.3s ease-out;
+}
+
+.but--med {
+    padding: 8px 20px;
+    font-size: 20px;
+}
+
+.but--lar {
+    padding: 12px 26px;
+    font-size: 20px;
+}
+
+.but--med:hover, .but--lar:hover {
+    background: #fff;
+    color: #242424;
+    transition: all 0.3s ease-out;
+}
