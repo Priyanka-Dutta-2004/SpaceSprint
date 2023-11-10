@@ -2,10 +2,13 @@ import React from 'react';
 import './Footer.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import { useTheme } from "./ThemeContext";
 
 function Footer() {
+  const { mode } = useTheme();
+
   return (
-    <div className='footer-container'>
+    <div className={`footer-container ${mode}`}>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
           Stay updated with best of our services

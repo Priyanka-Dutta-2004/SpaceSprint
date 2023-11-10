@@ -3,7 +3,16 @@
   background: #fff;
 }
 
+.cards.dark {
+  background-color: #18151B;
+}
+
+.cards.light {
+  background-color: #fff;
+}
+
 h1 {
+  color: #6b798d;
   text-align: center;
 }
 
@@ -94,7 +103,7 @@ h1 {
 }
 
 .cards__item__text {
-  color: #252e48;
+  color: #6b798d;
   font-size: 18px;
   line-height: 24px;
 }

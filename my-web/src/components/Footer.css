@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.footer-container.dark {
+  background-color: #18151B;
+}
+
+.footer-container.light {
+  background-color: #ADBCE6;
+}
+
 .footer-subscription {
   display: flex;
   flex-direction: column;
@@ -72,7 +80,7 @@
 }
 
 .footer-link-items > h2 {
-  color: #67768b;
+  color: #6b798d;
 }
 
 .footer-link-items a {

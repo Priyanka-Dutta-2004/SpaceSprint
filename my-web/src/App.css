@@ -5,6 +5,14 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+.hero-container.light {
+  background: url('/images/background2.png') center center/cover no-repeat;
+}
+
+.hero-container.dark {
+  background: url('/images/background3.png') center center/cover no-repeat;
+}
+
 .home,
 .stories,
 .offers,

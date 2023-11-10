@@ -2,10 +2,13 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
+import { useTheme } from "./ThemeContext";
 
 function HeroSection() {
+  const { mode } = useTheme();
+
   return (
-    <div className='hero-container'>
+    <div className={`hero-container ${mode}`}>
       {/* <video src='/videos/video-1.mp4' autoPlay loop muted /> */}
       <h1>LEARN & ELEVATE</h1>
       <p>Discover top Business Stories, learn Entrepreneurship and avail huge offers with our brand new website and user-friendly forums!</p>

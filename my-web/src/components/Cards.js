@@ -1,10 +1,13 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
+import { useTheme } from "./ThemeContext";
 
 function Cards() {
+  const { mode } = useTheme();
+
   return (
-    <div className='cards'>
+    <div className={`cards ${mode === 'dark' ? 'dark' : 'light'}`}>
       <h1>Check out your own Interest!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>

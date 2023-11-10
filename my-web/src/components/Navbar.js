@@ -5,6 +5,7 @@ import './Navbar.css';
 import { ReactComponent as Sun } from "./Sun.svg";
 import { ReactComponent as Moon } from "./Moon.svg";
 import "./DarkMode.css";
+import { useTheme } from "./ThemeContext";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -12,7 +13,6 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -26,11 +26,17 @@ function Navbar() {
     showButton();
   }, []);
 
+  const { mode, toggleMode } = useTheme();
+
+  useEffect(() => {
+    document.querySelector(".navbar").style.backgroundColor = mode === "light" ? "#ADBCE6" : "#18151B";
+  }, [mode]);
+
   window.addEventListener('resize', showButton);
 
   return (
     <>
-      <nav className='navbar'>
+      <nav className='navbar' style={{ backgroundColor: mode === "light" ? "#ADBCE6" : "#110016" }}>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             PPS 
@@ -105,22 +111,25 @@ function Navbar() {
             </li>
            
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} 
-          <div className='dark_mode'>
-            <input
+          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          <div className='icon-container'>  
+            <div className='dark_mode'>
+              <input
                 className='dark_mode_input'
                 type='checkbox'
                 id='darkmode-toggle'
-            />
-            <label className='dark_mode_label' for='darkmode-toggle'>
+                onClick={toggleMode}
+              />
+              <label className='dark_mode_label' htmlFor='darkmode-toggle'>
                 <Sun />
                 <Moon />
-            </label>
-        </div>
-          <div>
+              </label>
+            </div>
+            <div>
               <Link to='/'>
                 <img src='./images/settings.png' alt='Logo' />
               </Link>
+            </div>
           </div>
         </div>
       </nav>
