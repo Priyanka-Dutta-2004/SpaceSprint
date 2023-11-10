@@ -1,8 +1,7 @@
-// index.js
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { ThemeProvider } from "./components/ThemeContext"; // Adjust the path accordingly
+import { ThemeProvider } from "./components/ThemeContext"; 
 
 ReactDOM.render(
   <React.StrictMode>
