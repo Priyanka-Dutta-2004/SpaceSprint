@@ -90,6 +90,14 @@
   display: none;
 }
 
+.theme-icon {
+  cursor: pointer;
+}
+
+.fa-sun, .fa-moon {
+  color: white;
+}
+
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;

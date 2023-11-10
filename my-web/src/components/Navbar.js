@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { ReactComponent as Sun } from "./Sun.svg";
+import { ReactComponent as Moon } from "./Moon.svg";
+import "./DarkMode.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -9,6 +12,7 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -102,8 +106,19 @@ function Navbar() {
            
           </ul>
           {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} 
+          <div className='dark_mode'>
+            <input
+                className='dark_mode_input'
+                type='checkbox'
+                id='darkmode-toggle'
+            />
+            <label className='dark_mode_label' for='darkmode-toggle'>
+                <Sun />
+                <Moon />
+            </label>
+        </div>
           <div>
-              <Link to='/' className='settings'>
+              <Link to='/'>
                 <img src='./images/settings.png' alt='Logo' />
               </Link>
           </div>
