@@ -1,17 +1,8 @@
-.container {
-  background-image: url('background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
-}
-
-
 .navbar {
-  background: powderblue;
+  background: #ADBCE6;
   height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
@@ -28,21 +19,43 @@
 }
 
 .navbar-logo {
+  color: white;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
   display: flex;
   align-items: center;
 }
 
-.navbar-logo img {
+.navbar-logo, img {
+  padding-left: 10px;
   height: 40px;
+}
+
+.settings {
+  color: white;
+  justify-self: end;
+  margin-left: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.settings img {
+  padding-right: 10px;
+  height: 35px;
 }
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
+  grid-template-columns: repeat(8, auto);
+  grid-gap: 20px;
   list-style: none;
   text-align: center;
-  width: 60vw;
+  width: 65vw;
   justify-content: end;
   margin-right: 2rem;
 }
@@ -52,21 +65,21 @@
 }
 
 .nav-links {
-  color: #001b2b;
+  color: #fff;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 3rem 1rem;
-  height: 5%;
+  padding: 0.5rem 1rem;
+  height: 100%;
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid #001b2b;
+  border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }
 
 .fa-bars {
-  color: #001b2b;
+  color: white;
 }
 
 .nav-links-mobile {
@@ -78,15 +91,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .container {
-    background-image: url('background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-  }  
-
-  .nav-items {
+  .NavbarItems {
     position: relative;
   }
 
@@ -103,7 +108,7 @@
   }
 
   .nav-menu.active {
-    background: rgba(176, 224, 230, 0.658);
+    background: #97AFD4;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -121,7 +126,6 @@
     background-color: #fff;
     color: #242424;
     border-radius: 0;
-    height: fit-content;
   }
 
   .navbar-logo {
@@ -129,6 +133,14 @@
     top: 0;
     left: 0;
     transform: translate(25%, 50%);
+  }
+
+  .settings {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-100%, 42.5%);
   }
 
   .menu-icon {
@@ -142,11 +154,11 @@
   }
 
   .fa-times {
-    color: #001b2b;
+    color: #fff;
     font-size: 2rem;
   }
 
-  /* .nav-links-mobile {
+  .nav-links-mobile {
     display: block;
     text-align: center;
     margin: 2rem auto;
@@ -165,5 +177,5 @@
     background: #fff;
     color: #242424;
     transition: 250ms;
-  } */
+  }
 }

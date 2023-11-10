@@ -1,41 +1,43 @@
 :root {
-    --prim: #fff;
+  --primary: #fff;
 }
 
-.but {
-    padding: 8px 20px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
-.but--prim {
-    background-color: var(--prim);
-    color: #242424;
-    border: 1px solid var(--prim);
+.btn--primary {
+  background-color: var(--primary);
+  color: #67768b;
+  border: 1px solid var(--primary);
 }
 
-.but--outl {
-    background-color: transparent;
-    color: #fff;
-    padding: 8px 20px;
-    border: 1px solid var(--prim);
-    transition: all 0.3s ease-out;
+.btn--outline {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
 }
 
-.but--med {
-    padding: 8px 20px;
-    font-size: 20px;
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 18px;
 }
 
-.but--lar {
-    padding: 12px 26px;
-    font-size: 20px;
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
 }
 
-.but--med:hover, .but--lar:hover {
-    background: #fff;
-    color: #242424;
-    transition: all 0.3s ease-out;
+.btn--large:hover,
+.btn--medium:hover {
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #242424;
+  transition: 250ms;
 }
