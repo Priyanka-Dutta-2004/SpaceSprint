@@ -108,6 +108,11 @@
     position: relative;
   }
 
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+  }
+
   .nav-menu {
     display: flex;
     flex-direction: column;

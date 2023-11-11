@@ -3,11 +3,14 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Events from './components/pages/Events';
 import Stories from './components/pages/Stories';
+import Businesses from './components/pages/Business';
+import Community from './components/pages/Community';
 import Offers from './components/pages/Offers';
 import SignUp from './components/pages/SignUp';
-import Settings from './components/pages/Settings';
 import { Switch } from 'react-router-dom/cjs/react-router-dom';
+
 
 function App() {
   return (
@@ -17,9 +20,11 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/stories' component={Stories} />
+          <Route path='/events' component={Events} />
+          <Route path='/businesses' component={Businesses} />
+          <Route path='/community' component={Community} />
           <Route path='/offers' component={Offers} />
           <Route path='/sign-up' component={SignUp} />
-          <Route path='/settings' component={Settings} />
         </Switch>
       </Router>
     </>

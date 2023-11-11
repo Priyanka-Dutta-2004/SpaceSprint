@@ -6,8 +6,11 @@
 }
 
 .home,
-.services,
-.products,
+.events,
+.stories,
+.businesses,
+.community,
+.offers,
 .sign-up {
   display: flex;
   height: 90vh;
