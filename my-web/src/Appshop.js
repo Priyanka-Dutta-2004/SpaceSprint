@@ -1,8 +1,8 @@
 import React from 'react';
 import './Appshop.css';
-import Header from './components/Hero';
-import Categories from './components/Categories';
-import ProductSection from './components/Products';
+import Header from './components/pages/Hero';
+import Categories from './components/pages/Categories';
+import ProductSection from './components/pages/Products';
 
 function App() {
   return (

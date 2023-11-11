@@ -6,7 +6,7 @@ const CategoryItem = ({ imageSrc, altText, categoryText }) => (
     <figure className="category-banner">
       <img src={imageSrc} alt={altText} loading="lazy" width="510" height="600" className="w-100" />
     </figure>
-    <a href="#" className="btn btn-secondary">
+    <a href="#" className="butn butn-secondary">
       {categoryText}
     </a>
   </li>

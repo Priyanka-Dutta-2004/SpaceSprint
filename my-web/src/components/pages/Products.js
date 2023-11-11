@@ -13,7 +13,7 @@ const ProductCard = ({ imageSrc, altText, discountBadge, actions, title, prices 
 
         <div className="card-actions">
           {actions.map((action, index) => (
-            <button key={index} className={`card-action-btn ${action.className}`} aria-label={action.label}>
+            <button key={index} className={`card-action-butn ${action.className}`} aria-label={action.label}>
               {action.icon}
               {action.text && <p>{action.text}</p>}
               <span className="label-text">{action.label}</span>
