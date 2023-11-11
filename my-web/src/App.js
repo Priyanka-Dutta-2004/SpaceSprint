@@ -9,6 +9,7 @@ import Businesses from './components/pages/Business';
 import Community from './components/pages/Community';
 import Offers from './components/pages/Offers';
 import SignUp from './components/pages/SignUp';
+import FeedbackForm from './components/pages/Feedback/FeedbackForm';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/community' component={Community} />
           <Route path='/offers' component={Offers} />
           <Route path='/sign-up' component={SignUp} />
+          <Route path="/feedbacks" component={FeedbackForm} />
         </Switch>
       </Router>
     </>
