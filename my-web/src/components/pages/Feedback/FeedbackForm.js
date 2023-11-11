@@ -1,11 +1,12 @@
 // FeedbackForm.js
 import React from 'react';
+import './style.css';
 
 const FeedbackForm = () => {
   return (
     <div>
       <div className="contact-title">
-        <h1>Say Hello</h1>
+        <h1>HI THERE!</h1>
         <h2>We are always ready to serve you!</h2>
       </div>
 
@@ -15,7 +16,7 @@ const FeedbackForm = () => {
           <br />
           <input name="email" type="email" className="form-control" placeholder="Your Email" required />
           <br />
-          <textarea name="message" placeholder="Message" className="form-control" rows="10" required></textarea>
+          <textarea name="message" placeholder="Message" className="form-control" rows="10" cols="50" required></textarea>
           <br />
           <input type="submit" className="form-control submit" value="SEND MESSAGE" />
         </form>
