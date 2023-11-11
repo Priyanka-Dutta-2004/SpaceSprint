@@ -1,30 +1,31 @@
 
 import React from 'react';
+import './Products.css';
 
 const ProductCard = ({ imageSrc, altText, discountBadge, actions, title, prices }) => (
-  <li>
+  <li id='list'>
     <div className="product-card">
       <figure className="card-banner">
-        <a href="#">
-          <img src={imageSrc} alt={altText} loading="lazy" width="800" height="1034" className="w-100" />
+        <a id='link' href="#">
+          <img id='img' src={imageSrc} alt={altText} loading="lazy" width="800" height="1034" className="w-100" />
         </a>
 
         {discountBadge && <div className={`card-badge ${discountBadge.color}`}>{discountBadge.text}</div>}
 
         <div className="card-actions">
           {actions.map((action, index) => (
-            <button key={index} className={`card-action-butn ${action.className}`} aria-label={action.label}>
+            <button id='but' key={index} className={`card-action-butn ${action.className}`} aria-label={action.label}>
               {action.icon}
               {action.text && <p>{action.text}</p>}
-              <span className="label-text">{action.label}</span>
+              <span id='span' className="label-text">{action.label}</span>
             </button>
           ))}
         </div>
       </figure>
 
       <div className="card-content">
-        <h3 className="h4 card-title">
-          <a href="#">{title}</a>
+        <h3 id='h3' className="h4 card-title">
+          <a id='link' href="#">{title}</a>
         </h3>
 
         <div className="card-price">
@@ -47,7 +48,7 @@ const ProductSection = () => {
       discountBadge: { text: '-25%(Only for students)', color: 'red' },
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Varsi Store', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Varsi Store', className: 'cart-butn' },
         
       ],
       title: 'Leather Jacket',
@@ -59,7 +60,7 @@ const ProductSection = () => {
       discountBadge: { text: 'New', color: 'green' },
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Maxi Store', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Maxi Store', className: 'cart-butn' },
         
       ],
       title: 'Sunglass',
@@ -70,7 +71,7 @@ const ProductSection = () => {
       altText: 'Cowboy Boots',
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Sally Shoe Mart', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Sally Shoe Mart', className: 'cart-butn' },
         
       ],
       title: 'Cowboy Boots',
@@ -81,7 +82,7 @@ const ProductSection = () => {
       altText: 'Baggy Pants',
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Roy Stores', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Roy Stores', className: 'cart-butn' },
         
       ],
       title: 'Baggy Pants',
@@ -92,7 +93,7 @@ const ProductSection = () => {
       altText: 'Shimmering Eyeshadow Palette',
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit MyGlam Store', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit MyGlam Store', className: 'cart-butn' },
         
       ],
       title: 'Shimmering Eyeshadow Palette',
@@ -103,7 +104,7 @@ const ProductSection = () => {
       altText: 'Choco Mocha Milkshake',
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit CostaRica Cafe', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit CostaRica Cafe', className: 'cart-butn' },
         
       ],
       title: 'Choco Mocha Milkshake',
@@ -114,7 +115,7 @@ const ProductSection = () => {
       altText: 'Tasty Creamy Soup',
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Barista Cafe', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Barista Cafe', className: 'cart-butn' },
         
       ],
       title: 'Tasty Creamy Soup',
@@ -125,7 +126,7 @@ const ProductSection = () => {
       altText: 'White Airpods',
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Zeno Electronics', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Zeno Electronics', className: 'cart-butn' },
         
       ],
       title: 'White Airpods',
@@ -136,7 +137,7 @@ const ProductSection = () => {
       altText: 'Yellow Handbag',
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Shimer Store', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Shimer Store', className: 'cart-butn' },
         
       ],
       title: 'Yellow Handbag',
@@ -148,7 +149,7 @@ const ProductSection = () => {
       discountBadge: { text: 'New', color: 'green' },
       actions: [
         
-        { icon: <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Shine Store', className: 'cart-btn' },
+        { icon: <ion-icon id="icon" name="bag-handle-outline" aria-hidden="true"></ion-icon>, label: 'Visit Shine Store', className: 'cart-butn' },
         
       ],
       title: 'Earring Ring Set',
@@ -160,7 +161,7 @@ const ProductSection = () => {
   return (
     <section className="section product">
       <div className="container">
-        <h2 className="h2 section-title">This WEEK'S BEST DEALS</h2>
+        <h2 id='h2' className="h2 section-title">This WEEK'S BEST DEALS</h2>
         <ul className="product-list">
           {productData.map((product, index) => (
             <ProductCard key={index} {...product} />

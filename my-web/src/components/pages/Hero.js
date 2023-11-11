@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <section className="hero" id="home" style={{ backgroundImage: `url('./images/hero-banner2.jpg')` }}>
     <div className="hero-content">
-      <h1>Fashion Everyday</h1>
+      <h1 id='h1'>Fashion Everyday</h1>
       <p>Get exclusive 10% student discount</p>
       <div>
       <button 

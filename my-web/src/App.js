@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import './App.css';import { Switch } from 'react-router-dom/cjs/react-router-dom';
+import './App.css';
+import { Switch } from 'react-router-dom/cjs/react-router-dom';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Events from './components/pages/Events';
