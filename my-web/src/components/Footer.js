@@ -3,6 +3,7 @@ import './Footer.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import { useTheme } from "./ThemeContext";
+import ContactForm from '../Feedback/Feedback';
 
 function Footer() {
   const { mode } = useTheme();
@@ -35,7 +36,7 @@ function Footer() {
             <Link to='/sign-up'>How it works</Link>
             <Link to='/'>Associates</Link>
             <Link to='/'>FAQ</Link>
-            <Link to='/'>Feedbacks</Link>
+            <Link to='/feedback#feedback-heading'>Feedbacks</Link>
             <Link to='/'>Terms of Service</Link>
           </div>
           <div class='footer-link-items'>
