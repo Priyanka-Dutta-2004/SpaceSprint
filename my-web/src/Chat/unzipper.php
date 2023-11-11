@@ -1,15 +1,4 @@
 <?php
-/**
- * The Unzipper extracts .zip or .rar archives and .gz files on webservers.
- * It's handy if you do not have shell access. E.g. if you want to upload a lot
- * of files (php framework or image collection) as an archive to save time.
- * As of version 0.1.0 it also supports creating archives.
- *
- * @author  Andreas Tasch, at[tec], attec.at
- * @license GNU GPL v3
- * @package attec.toolbox
- * @version 0.1.1
- */
 define('VERSION', '0.1.1');
 
 $timestart = microtime(TRUE);
@@ -62,14 +51,6 @@ class Unzipper {
     }
   }
 
-  /**
-   * Prepare and check zipfile for extraction.
-   *
-   * @param string $archive
-   *   The archive name including file extension. E.g. my_archive.zip.
-   * @param string $destination
-   *   The relative destination path where to extract files.
-   */
   public function prepareExtraction($archive, $destination = '') {
     // Determine paths.
     if (empty($destination)) {
@@ -88,14 +69,6 @@ class Unzipper {
     }
   }
 
-  /**
-   * Checks file extension and calls suitable extractor functions.
-   *
-   * @param string $archive
-   *   The archive name including file extension. E.g. my_archive.zip.
-   * @param string $destination
-   *   The relative destination path where to extract files.
-   */
   public static function extract($archive, $destination) {
     $ext = pathinfo($archive, PATHINFO_EXTENSION);
     switch ($ext) {
@@ -112,12 +85,6 @@ class Unzipper {
 
   }
 
-  /**
-   * Decompress/extract a zip archive using ZipArchive.
-   *
-   * @param $archive
-   * @param $destination
-   */
   public static function extractZipArchive($archive, $destination) {
     // Check if webserver supports unzipping.
     if (!class_exists('ZipArchive')) {
@@ -144,14 +111,6 @@ class Unzipper {
     }
   }
 
-  /**
-   * Decompress a .gz File.
-   *
-   * @param string $archive
-   *   The archive name including file extension. E.g. my_archive.zip.
-   * @param string $destination
-   *   The relative destination path where to extract files.
-   */
   public static function extractGzipFile($archive, $destination) {
     // Check if zlib is enabled
     if (!function_exists('gzopen')) {
@@ -189,14 +148,6 @@ class Unzipper {
 
   }
 
-  /**
-   * Decompress/extract a Rar archive using RarArchive.
-   *
-   * @param string $archive
-   *   The archive name including file extension. E.g. my_archive.zip.
-   * @param string $destination
-   *   The relative destination path where to extract files.
-   */
   public static function extractRarArchive($archive, $destination) {
     // Check if webserver supports unzipping.
     if (!class_exists('RarArchive')) {
@@ -225,25 +176,8 @@ class Unzipper {
 
 }
 
-/**
- * Class Zipper
- *
- * Copied and slightly modified from http://at2.php.net/manual/en/class.ziparchive.php#110719
- * @author umbalaconmeogia
- */
 class Zipper {
-  /**
-   * Add files and sub-directories in a folder to zip file.
-   *
-   * @param string $folder
-   *   Path to folder that should be zipped.
-   *
-   * @param ZipArchive $zipFile
-   *   Zipfile where files end up.
-   *
-   * @param int $exclusiveLength
-   *   Number of text to be exclusived from the file path.
-   */
+
   private static function folderToZip($folder, &$zipFile, $exclusiveLength) {
     $handle = opendir($folder);
 
@@ -267,18 +201,6 @@ class Zipper {
     closedir($handle);
   }
 
-  /**
-   * Zip a folder (including itself).
-   *
-   * Usage:
-   *   Zipper::zipDir('path/to/sourceDir', 'path/to/out.zip');
-   *
-   * @param string $sourcePath
-   *   Relative path of directory to be zipped.
-   *
-   * @param string $outZipPath
-   *   Relative path of the resulting output zip file.
-   */
   public static function zipDir($sourcePath, $outZipPath) {
     $pathInfo = pathinfo($sourcePath);
     $parentPath = $pathInfo['dirname'];
