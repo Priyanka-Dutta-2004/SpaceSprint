@@ -1,14 +1,14 @@
-body {
-    margin: 0;
-    padding: 0;
+.feedback-bg {
+    display: flex;
     text-align: center;
+    flex-direction: column;
     background: url(/images/feedback-bg.jpeg);
     background-size: cover;
-    position: relative;
     background-position: center;
     background-repeat: no-repeat;
     font-family: sans-serif;
-    max-height: fit-content;
+    object-fit: contain;
+
 }
 
 .contact-title{

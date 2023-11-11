@@ -4,7 +4,7 @@ import './style.css';
 
 const FeedbackForm = () => {
   return (
-    <div>
+    <div className='feedback-bg'>
       <div className="contact-title">
         <h1>HI THERE!</h1>
         <h2>We are always ready to serve you!</h2>
