@@ -1,3 +1,7 @@
+:root {
+  --primary: #fff;
+}
+
 .hero {
   margin-bottom: 40px;
   background-repeat: no-repeat;
@@ -37,7 +41,13 @@
   margin-top: 50px;
   margin-left: 200px;
   padding-block: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 22px;
+}
+
+.butn--primary {
+  background-color: var(--primary);
+  color: black;
+  border: 1px solid var(--primary);
 }

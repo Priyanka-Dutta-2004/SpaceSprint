@@ -9,7 +9,8 @@ export default function Offers() {
       <p>Get exclusive 10% student discount</p>
       <div>
       <button 
-        className="butn butn-primary"
+        className="butn--primary"
+        onClick={console.log('hey')}
       >
         Shop Now in Kisosk Wears
       </button>
