@@ -1,4 +1,6 @@
-video {
+/* HeroSection.css */
+
+.video {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -10,8 +12,15 @@ p {
   text-align: center;
 }
 
-.hero-container {
+.hero-container.light {
   background: url('/images/background2.png') center center/cover no-repeat;
+}
+
+.hero-container.dark {
+  background: url('/images/background3.png') center center/cover no-repeat;
+}
+
+.hero-container {
   height: 100vh;
   width: 100%;
   display: flex;
