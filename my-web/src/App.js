@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import './App.css';
+import './App.css';import { Switch } from 'react-router-dom/cjs/react-router-dom';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Events from './components/pages/Events';
@@ -9,8 +9,6 @@ import Businesses from './components/pages/Business';
 import Community from './components/pages/Community';
 import Offers from './components/pages/Offers';
 import SignUp from './components/pages/SignUp';
-import { Switch } from 'react-router-dom/cjs/react-router-dom';
-
 
 function App() {
   return (
