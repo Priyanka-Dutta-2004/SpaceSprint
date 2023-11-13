@@ -11,7 +11,6 @@ import Community from './components/pages/Community';
 import Offers from './components/pages/Offers';
 import SignUp from './components/pages/SignUp';
 import FeedbackForm from './components/pages/Feedback/FeedbackForm';
-import Footer from './components/Footer';
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
           <Route path='/sign-up' component={SignUp} />
           <Route path="/feedbacks" component={FeedbackForm} />
         </Switch>
-        <Footer />
       </Router>
     </>
   );
